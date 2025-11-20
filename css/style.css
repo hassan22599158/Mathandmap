@@ -214,3 +214,22 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Fix MathJax Fraction Bars */
+.MathJax span {
+    border-color: var(--text-color) !important;
+}
+.mjx-frac line, .mjx-line, .mjx-box {
+    stroke: var(--text-color) !important;
+    background-color: var(--text-color) !important;
+    border-color: var(--text-color) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Prevent double-flipping of Arabic equations */
+.MathJax, .MathJax_Display {
+    direction: ltr !important;
+    font-family: 'Amiri', serif !important;
+    font-size: 120% !important;
+}
