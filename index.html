@@ -9,38 +9,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Amiri&display=swap" rel="stylesheet">
 
-    <!-- Mermaid (Optional, keeping if needed for old charts, but user wants replacement) -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-
     <!-- Marked (Markdown) -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <!-- MathJax -->
-    <script>
-    MathJax = {
-      loader: {
-        load: ['[tex]/arabic']
-      },
-      tex: {
-        packages: {'[+]': ['arabic']},
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        tags: 'ams'
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-    </script>
-    <!-- We need to manually load the arabic extension because it's not in the standard MathJax distribution -->
-    <!-- However, MathJax 3 uses a different extension system. The library found (Edraak/arabic-mathjax) is for v2. -->
-    <!-- Since mixing v2 extensions with v3 is tricky, and v3 has better RTL support natively,
-         I will stick to MathJax 3 standard RTL but will try to use the v2 extension if I can shim it,
-         OR mostly rely on manual RTL or just standard MathJax with RTL page context.
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 
-         Actually, let's switch to MathJax 2.7.x to use the proven Edraak library which does EXACTLY what the user requested (Arabic symbols).
-         MathJax 3 is better generally, but the specific Arabic symbols (Flip, Arabic variable names) are best handled by that library.
-    -->
+    <!-- MathJax -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             extensions: ["tex2jax.js", "[arabic]/arabic.js"],
@@ -72,13 +47,14 @@
                     <option value="medium" selected>خط متوسط</option>
                     <option value="large">خط كبير</option>
                 </select>
+                <button id="btn-fix-math" title="إصلاح المعادلات والمحاذاة">🔧 إصلاح</button>
                 <button id="btn-help">؟ طريقة الاستخدام</button>
             </div>
         </header>
 
         <div class="main-content">
             <div class="editor-pane">
-                <textarea id="editor" placeholder="اكتب هنا... (يدعم Markdown, LaTeX للمعادلات, و Mermaid للخرائط)"></textarea>
+                <textarea id="editor" placeholder="اكتب هنا... (يدعم Markdown, LaTeX للمعادلات, و MindMap للخرائط)"></textarea>
             </div>
             <div class="preview-pane" id="preview">
                 <!-- Content will be rendered here -->
