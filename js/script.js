@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderContent();
     });
 
-    // Initial render with the 5 requested maps - ESCAPED LaTeX
+    // Initial render with the 5 requested maps - ARABIC MATHJAX MACROS ADDED
     editor.value = `# الخرائط الذهنية المطلوبة
 
 استخدم الكود التالي \`\`\`mindmap ... \`\`\` لإنشاء الخرائط.
@@ -121,21 +121,21 @@ document.addEventListener('DOMContentLoaded', () => {
 ## 1. قوانين الأسس
 \`\`\`mindmap
 قوانين الأسس
-: $a, b \\in \\mathbb{R}, m, n \\in \\mathbb{Z}$
+: $\\ar{a, b \\in \\mathbb{R}, m, n \\in \\mathbb{Z}}$
   الضرب
   : عند ضرب الأساسات المتشابهة، نجمع الأسس
-  : $a^m \\times a^n = a^{m+n}$
+  : $\\ar{a^m \\times a^n = a^{m+n}}$
   القسمة
   : عند قسمة الأساسات المتشابهة، نطرح الأسس
-  : $\\frac{a^m}{a^n} = a^{m-n}$
+  : $\\ar{\\frac{a^m}{a^n} = a^{m-n}}$
   قوة القوة
   : عند رفع قوة لقوة أخرى، نضرب الأسس
-  : $(a^m)^n = a^{m \\cdot n}$
+  : $\\ar{(a^m)^n = a^{m \\cdot n}}$
   الأس الصفري
   : أي عدد غير الصفر مرفوع للأس صفر يساوي 1
-  : $a^0 = 1$
+  : $\\ar{a^0 = 1}$
   الأس السالب
-  : $a^{-n} = \\frac{1}{a^n}$
+  : $\\ar{a^{-n} = \\frac{1}{a^n}}$
 \`\`\`
 
 ## 2. العمليات على الأعداد النسبية
@@ -144,17 +144,17 @@ document.addEventListener('DOMContentLoaded', () => {
   الجمع والطرح
   : يجب توحيد المقامات أولاً
     الخواص
-    : الانغلاق: $a+b \\in \\mathbb{Q}$
-    : الإبدال: $a+b = b+a$
-    : الدمج: $(a+b)+c = a+(b+c)$
-    : المعكوس: $a+(-a) = 0$
-    : المحايد: $a+0 = a$
+    : الانغلاق: $\\ar{a+b \\in \\mathbb{Q}}$
+    : الإبدال: $\\ar{a+b = b+a}$
+    : الدمج: $\\ar{(a+b)+c = a+(b+c)}$
+    : المعكوس: $\\ar{a+(-a) = 0}$
+    : المحايد: $\\ar{a+0 = a}$
   الضرب
   : البسط في البسط والمقام في المقام
-  : $\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}$
+  : $\\ar{\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}}$
   القسمة
   : الضرب في المقلوب
-  : $\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$
+  : $\\ar{\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}}$
 \`\`\`
 
 ## 3. مقارنة الأعداد
@@ -163,22 +163,22 @@ document.addEventListener('DOMContentLoaded', () => {
   أنواع الأعداد
   : | رمز | المجموعة |
   : |---|---|
-  : | $\\mathbb{N}$ | الطبيعية |
-  : | $\\mathbb{Z}$ | الصحيحة |
-  : | $\\mathbb{Q}$ | النسبية |
-  : | $\\mathbb{R}$ | الحقيقية |
+  : | $\\ar{\\mathbb{N}}$ | الطبيعية |
+  : | $\\ar{\\mathbb{Z}}$ | الصحيحة |
+  : | $\\ar{\\mathbb{Q}}$ | النسبية |
+  : | $\\ar{\\mathbb{R}}$ | الحقيقية |
   الرموز المستخدمة
-  : $>$ أكبر من
-  : $<$ أصغر من
-  : $=$ يساوي
-  : $\\leq$ أصغر من أو يساوي
-  : $\\geq$ أكبر من أو يساوي
+  : $\\ar{>}$ أكبر من
+  : $\\ar{<}$ أصغر من
+  : $\\ar{=}$ يساوي
+  : $\\ar{\\leq}$ أصغر من أو يساوي
+  : $\\ar{\\geq}$ أكبر من أو يساوي
 \`\`\`
 
 ## 4. قانون أوم (الفيزياء)
 \`\`\`mindmap
 قانون أوم
-: $V = I \\times R$
+: $\\ar{V = I \\times R}$
   المتغيرات
     الجهد (V)
     : فرق الجهد الكهربائي
@@ -191,9 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
     : تقاس بالأوم (Ohm)
   التطبيقات
     حساب التيار
-    : $I = \\frac{V}{R}$
+    : $\\ar{I = \\frac{V}{R}}$
     حساب المقاومة
-    : $R = \\frac{V}{I}$
+    : $\\ar{R = \\frac{V}{I}}$
 \`\`\`
 
 ## 5. تصنيف الكائنات الحية
